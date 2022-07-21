@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+/* generelle endringer*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: hsla(213, 94%, 52%, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* generelle endringer https://www.youtube.com/watch?v=sjrp1FEHnyA*/
+
+header {
+  background-color: hsla(0, 0%, 0%, 0.7);
+  box-shadow: 1px 1px 4px 0 hsla(0, 0%, 0%, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+header ul a {
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+header ul a:hover {
+  background-color: hsla(240, 100%, 50%, 0.7);
+  border-radius: 35px;
+}
+
+header .logo {
+  float: left;
+  display: block;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4em;
+  padding: 10px 20px;
+}
+
+header .menu {
+  font-family: "Koulen", cursive;
+  font-size: 20px;
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.28s ease-out;
+}
+
+header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+header .menu-icon .nav-icon {
+  background-color: white;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+header .menu-icon .nav-icon::before {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+
+header .menu-icon .nav-icon::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+
+header .menu-btn {
+  display: none;
+}
+
+header .menu-btn:checked ~ .menu {
+  max-height: 300px;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 53rem) {
+  header li {
+    float: left;
+  }
+  header li a {
+    margin: 10px;
+    padding: 7px 30px;
+  }
+
+  header .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+
+  header #menu-login-signup {
+    float: right;
+    margin-right: 30px;
+  }
+
+  header .menu-icon {
+    display: none;
+  }
+}
+
+/* Bakgrunnsbilde og teksten over bakgrunnsbilded */
+
+/* Bakgrunnsbilde og teksten over bakgrunnsbilded */
+.banner {
+  width: 100%;
+  height: 700px;
+  background-image: url(./Resource/Images/backgroundimage.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*Teksten over bakgrunnsbilded */
+
+.Wroclaw-content,
+.Student-content {
+  color: hsl(28, 93%, 95%);
+  font-family: "Koulen", cursive;
+  flex-shrink: 2;
+}
+
+.Student-content {
+  background-color: rgb(151, 18, 18);
+  padding: 10px;
+  width: auto;
+  border-radius: 70px;
+  text-align: center;
+}
+
+.Student-content:hover {
+  cursor: pointer;
+  background-color: hsla(0, 79%, 33%, 0);
+  color: rgb(151, 18, 18);
+  border: 3px solid rgb(151, 18, 18);
+}
+
+/* klipp og lim inn*/
+
+/* .yim {
+  color: hsl(28, 93%, 95%);
+  font-family: "Koulen", cursive;
+  text-align: center;
+}
+
+.welcom-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Header-text {
+  font-size: 52px;
+  margin-top: 150px;
+}
+
+#yimo:hover {
+  color: hsl(42, 60%, 48%);
+  cursor: pointer;
+}
+
+#yimi {
+  font-size: 32px;
+  background-color: rgb(151, 18, 18);
+  padding: 10px;
+  width: 400px;
+  border-radius: 70px;
+  margin: 0 auto;
+}
+#yimi:hover {
+  cursor: pointer;
+  background-color: hsla(0, 79%, 33%, 0);
+  color: rgb(151, 18, 18);
+  border: 3px solid rgb(151, 18, 18);
+} */
+
+.Contact-information {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+  background-color: hsla(0, 0%, 0%, 0.9);
+  width: 100%;
+  height: 500px;
+}
+.info {
+  margin: 0;
+  background-color: red;
+  display: inline block;
+}
+
+@media (min-width: 53rem) {
+  .Contact-information {
+    height: 200px;
+  }
+}
+.footer {
+  background-color: hsla(0, 0%, 0%, 0.9);
+  color: white;
+  height: auto;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+  line-height: 5rem1;
+  margin: 2.2rem 0 1.2rem 0;
+}
+
+.footer-content p {
+  max-width: 700px;
+  line-height: 2.4rem;
+  letter-spacing: rem;
+  margin: 0 0.4rem;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.footer-bottom {
+  margin-bottom: 0.9rem;
+}
